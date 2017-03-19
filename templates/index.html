@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>论坛首页</title>
+        <title>康哥的部落首页</title>
         <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     </head>
 
@@ -10,19 +10,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-12">
-                    <h2>部落论坛</h2>
+                    <h2>康哥的部落论坛</h2>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-xs-12 col-md-2">运维专区</div>
-                <div class="col-xs-12 col-md-8">Django专区</div>
-                <div class="col-xs-12 col-md-2">部落建设</div>
+        {% for b in blocks %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a href="#" style="font-size: 16px;">{{ b.name }}</a>
+                <span class="pull-right">{{ b.manager }}</span>
+            </div>
+            <div class="panel-body">
+                {{ b.desc }}
             </div>
         </div>
+        {% endfor %}
 
-
-
+        </div>
 
 
     </body>
