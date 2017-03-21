@@ -11,5 +11,5 @@ class Block(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = "板块"
-        verbose_name_plural = "板块"
+        verbose_name = "版块"
+        verbose_name_plural = "版块"
